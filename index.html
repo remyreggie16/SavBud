@@ -55,6 +55,14 @@
   #ledger-root .wrap { max-width: 860px; margin: 0 auto; }
 
   /* Remove number input spin buttons everywhere in the tracker */
+  /* iOS Safari auto-zooms on focus for any input/select under 16px — this keeps
+     the page at whatever zoom level the person has set themselves */
+  #ledger-root input,
+  #ledger-root select,
+  #ledger-root textarea {
+    font-size: 16px;
+  }
+
   #ledger-root input[type="number"] {
     -moz-appearance: textfield;
   }
@@ -311,7 +319,7 @@
     border: none;
     outline: none;
     color: var(--paper-ink);
-    width: 92px;
+    width: 108px;
     padding: 2px 0;
   }
   .cat-chip .cat-remove {
